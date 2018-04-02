@@ -4,8 +4,6 @@ import java.util.Set;
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
-import javax.annotation.processing.SupportedSourceVersion;
-import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 
@@ -15,8 +13,6 @@ import oc.annotation.Todo;
 
 //Permet de spécifier les annotations à traiter
 @SupportedAnnotationTypes(value = { "oc.annotation.Todo" })
-//Définit quelle version de source gérer, ici je code en Java 7
-@SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class TodoProcesseur extends AbstractProcessor {
     //La fameuse méthode à redéfinir
     @Override

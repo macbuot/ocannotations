@@ -10,7 +10,6 @@ public class StringInterfaceImpl implements StringInterface {
     }
 
     @Crypted(type = TypeCryptage.SHA1)
-    @Override
     public String substring(int start) {
         //nous allons retirer les espaces en début et en fin de chaîne
         //avant de faire notre substring...
@@ -18,12 +17,10 @@ public class StringInterfaceImpl implements StringInterface {
     }
 
     @Crypted
-    @Override
     public String toString() {
         return monString;
     }
 
-    @Override
     public int hashCode() {
         return monString.hashCode();
     }

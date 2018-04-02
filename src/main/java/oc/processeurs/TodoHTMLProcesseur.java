@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -13,8 +11,6 @@ import java.util.Set;
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
-import javax.annotation.processing.SupportedSourceVersion;
-import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 
@@ -23,8 +19,6 @@ import oc.annotation.Todos;
 
 //Permet de spécifier les annotations à traiter
 @SupportedAnnotationTypes(value = { "oc.annotation.Todo", "oc.annotation.Todos" })
-//Défini quelle version de source gérer, ici je code en Java 7
-@SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class TodoHTMLProcesseur extends AbstractProcessor  {
     List<Todo> list;
     FileOutputStream fw = null;
